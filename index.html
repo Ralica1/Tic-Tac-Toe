@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
   <title>TicTacToe</title>
 </head>
 <body>
@@ -32,15 +34,17 @@
   </table>
 </div>
 
-<!-- Create input fields for the players to enter their names -->
-<label for="player1">Player 1:</label>
-<input type="text" id="player1" name="player1">
-<br>
-<label for="player2">Player 2:</label>
-<input type="text" id="player2" name="player2">
-
-<!-- Create a button to start/restart the game -->
-<button id="start-button">Start/Restart</button>
+<div class="input-div">
+  <!-- Create input fields for the players to enter their names -->
+  <label for="player1">Player 1:</label>
+  <input type="text" id="player1" name="player1">
+  <br>
+  <label for="player2">Player 2:</label>
+  <input type="text" id="player2" name="player2">
+  <br>
+  <!-- Create a button to start/restart the game -->
+  <button id="start-button">Start/Restart</button>
+</div>
 
 <!-- Create a display element to show the result of the game -->
 <div id="result"></div>
