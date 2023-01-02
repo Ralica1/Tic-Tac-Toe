@@ -77,12 +77,4 @@ input {
   margin: 10px 0;
 }
 
-/* Make the gameboard responsive by setting the table to display as a block-level element and setting the cells to have a width of 100% on small screens */
-@media (max-width: 600px) {
-  #gameboard table {
-    display: block;
-  }
-  #gameboard td {
-    width: 100%;
-  }
-}
+
