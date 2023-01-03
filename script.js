@@ -68,10 +68,18 @@ function handleCellClick(event) {
     const result = checkForWin(gameboard);
     if (result !== null) {
       const resultElement = document.createElement('div');
-      resultElement.textContent = `Game over! ${result} wins!`.toUpperCase();
-      resultElement.style.fontSize = '32px';
-      resultElement.style.color = 'black';
-      document.querySelector('#controls').appendChild(resultElement);
+      resultElement.textContent = `Game over! ${result} wins!`;
+      document.querySelector('#game-result').appendChild(resultElement);
     }
   }
 }
+
+function resetGame() {
+  gameboard.fill("");
+  currentPlayer = "X";
+  cells.forEach(cell => cell.textContent = "");
+  document.querySelector('#game-result').textContent = "";
+}
+
+const newGameButton = document.querySelector('#new-game');
+newGameButton.addEventListener('click', resetGame);
