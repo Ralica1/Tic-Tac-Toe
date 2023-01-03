@@ -52,6 +52,7 @@ body {
 
 #scoreboard {
   display: flex;
+  margin-bottom: 30px;
 }
 
 .player-1-score,
