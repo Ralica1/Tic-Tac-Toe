@@ -1,80 +1,60 @@
-/* Set the font and background color for the site */
 body {
-  font-family: Arial, sans-serif;
-  color: white;
-  background-color: #333333; /* Dark gray color */
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: #6d6e70;
 }
 
-/* Set the font and background color for the gameboard */
-#gameboard {
-  font-family: Arial, sans-serif;
-  color: white;
-  background-color: #ff922b; /* Pastel orange color */
+#tic-tac-toe {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
   width: 300px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
+  height: 300px;
+  background-color: #f78c00;
+  border: 2px solid #000000;
 }
 
-/* Style the cells of the gameboard */
-#gameboard td {
+.cell {
   width: 100px;
   height: 100px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  font-size: 36px;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid white;
-  font-size: 48px;
-  transition: background-color 0.5s;
-}
-
-/* Add hover effect to the cells */
-#gameboard td:hover {
-  background-color: #eb7100;
   cursor: pointer;
 }
 
-/* Style the input fields and start button */
-.input-div {
-  background-color: #333333; /* Gray color */
-  width: 300px;
-  margin: 0 auto;
+.cell:hover {
+  background-color: #ffd166;
+}
+
+#controls {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  margin-top: 50px;
+  align-items: center;
 }
-label,
-input {
-  color: white;
-  display: block;
+
+#new-game {
   margin: 10px 0;
-  text-align: center;
-}
-#start-button {
-  color: white;
-  background-color: green;
-  border: none;
-  padding: 8px 16px;
+  padding: 5px 10px;
+  border: 2px solid #000000;
+  background-color: #f78c00;
+  color: #000000;
   font-size: 16px;
   cursor: pointer;
-  margin: 10px 0;
 }
 
-/* Style the result display element */
-#result {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin: 10px 0;
+#scoreboard {
+  display: flex;
 }
 
-
+.player-1-score,
+.player-2-score {
+  margin: 0 10px;
+  font-size: 16px;
+}

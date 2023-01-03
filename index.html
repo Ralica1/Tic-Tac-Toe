@@ -9,44 +9,25 @@
   <title>TicTacToe</title>
 </head>
 <body>
-  <!-- Create a container element for the gameboard -->
-<div id="gameboard">
-  <!-- Create a table with 3 rows and 3 columns to represent the gameboard -->
-  <table>
-    <tr>
-      <!-- Create 3 cells in the first row -->
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <!-- Create 3 cells in the second row -->
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <!-- Create 3 cells in the third row -->
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
-</div>
-
-<div class="input-div">
-  <!-- Create input fields for the players to enter their names -->
-  <label for="player1">Player 1:</label>
-  <input type="text" id="player1" name="player1">
-  <br>
-  <label for="player2">Player 2:</label>
-  <input type="text" id="player2" name="player2">
-  <br>
-  <!-- Create a button to start/restart the game -->
-  <button id="start-button">Start/Restart</button>
-</div>
-
-<!-- Create a display element to show the result of the game -->
-<div id="result"></div>
+  <div id="tic-tac-toe">
+    <div class="board">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+  </div>
+  <div id="controls">
+    <button id="new-game">New game</button>
+    <div id="scoreboard">
+      <div class="player-1-score">Player 1: 0</div>
+      <div class="player-2-score">Player 2: 0</div>
+    </div>
+  </div>
 </body>
 </html>
