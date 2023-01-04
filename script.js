@@ -2,6 +2,7 @@ const gameboard = ["", "", "", "", "", "", "", "", ""];
 let player1Score = 0;
 let player2Score = 0;
 let currentPlayer = "X";
+let gameOver = false;
 
 function renderGameboard(gameboard) {
   const cells = document.querySelectorAll(".cell");
@@ -78,27 +79,30 @@ function checkForWin(gameboard) {
   return null;
 }
 function handleCellClick(event) {
-  const index = event.target.dataset.index;
-  const success = placeMark(gameboard, index, currentPlayer);
-  if (success) {
-    event.target.textContent = currentPlayer;
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
-    const result = checkForWin(gameboard);
-    if (result !== null) {
-      const resultElement = document.createElement('div');
-      if (result === "T") {
-        resultElement.textContent = "Game over! It's a tie!";
-      } else {
-        resultElement.textContent = `Game over! ${result} wins!`;
-        if (result === "X") {
-          player1Score++;
-        } else if (result === "O") {
-          player2Score++;
+  if (!gameOver) {
+    const index = event.target.dataset.index;
+    const success = placeMark(gameboard, index, currentPlayer);
+    if (success) {
+      event.target.textContent = currentPlayer;
+      currentPlayer = currentPlayer === "X" ? "O" : "X";
+      const result = checkForWin(gameboard);
+      if (result !== null) {
+        gameOver = true;
+        const resultElement = document.createElement("div");
+        if (result === "T") {
+          resultElement.textContent = "Game over! It's a tie!";
+        } else {
+          resultElement.textContent = `Game over! ${result} wins!`;
+          if (result === "X") {
+            player1Score++;
+          } else if (result === "O") {
+            player2Score++;
+          }
         }
+        document.querySelector("#game-result").appendChild(resultElement);
+        document.querySelector("#game-score-1").textContent = player1Score;
+        document.querySelector("#game-score-2").textContent = player2Score;
       }
-      document.querySelector('#game-result').appendChild(resultElement);
-      document.querySelector('#game-score-1').textContent = player1Score;
-      document.querySelector('#game-score-2').textContent = player2Score;
     }
   }
 }
@@ -108,6 +112,7 @@ function resetGame() {
   currentPlayer = "X";
   cells.forEach((cell) => (cell.textContent = ""));
   document.querySelector("#game-result").textContent = "";
+  gameOver = false;
 }
 
 const newGameButton = document.querySelector("#new-game");
