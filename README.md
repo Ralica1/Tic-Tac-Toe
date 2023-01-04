@@ -1,16 +1,38 @@
 # Tic-Tac-Toe
 
-### 1st step
+A simple Tic-Tac-Toe game written in JavaScript. This is part of **Odin Project curriculum**
 
-Set up the HTML structure for the Tic Tac Toe game.
+## Demo
 
-### 2nd step
+You can try out a demo of the game [here](https://ralica1.github.io/Tic-Tac-Toe/).
 
-Styled the game with a dark theme.
+## Installation
 
-### 3rd step 
+To run the game locally, follow these steps:
 
-The board element has an event listener added to it that listens for clicks and calls the handleClick function when a cell is clicked. The handleClick function places the current player's mark on the board and checks if the player has won the game by calling the checkForWin function. If the player has won, the gameOver variable is set to true to end the game. If the player has not won, the function switches to the other player by toggling the value of the currentPlayer variable.
+1. Clone the repository:
 
-### 4th step 
+`git clone https://github.com/user/tic-tac-toe.git`
 
+2. Navigate to the directory:
+
+`cd tic-tac-toe`
+
+3. Open `index.html` in your web browser.
+
+## How to Play
+
+1. Players take turns clicking on empty cells to place their mark ("X" or "O").
+2. The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins the game.
+3. If all cells are filled and no player has won, the game is a tie.
+4. Click the "New game" button to start a new game.
+
+## License
+
+This project is licensed under the Rasim Korajlic owner of this repository.
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- Odin project curriculum
